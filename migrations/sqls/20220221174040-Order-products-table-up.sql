@@ -1,0 +1,7 @@
+CREATE TABLE Order_products(
+    id SERIAL PRIMARY KEY,
+    quantity INTEGER NOT NULL,
+    order_id INTEGER REFERENCES Orders(id) ON DELETE CASCADE NOT NULL,
+    product_id INTEGER REFERENCES Products(id) ON DELETE CASCADE NOT NULL
+
+)
